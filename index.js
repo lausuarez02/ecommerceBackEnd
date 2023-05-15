@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //     res.send('Welcome to main page')
 // })
 
-app.use('/v1/all-products', router)
+app.use('/v1', router)
 app.use((err, _req, res, next) => {
     res.status(500).send('An unexpected error occured.')
 })
